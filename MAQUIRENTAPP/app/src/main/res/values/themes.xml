@@ -2,8 +2,20 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MAQUIRENTAPP" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/gris_100</item>
+        <item name="colorPrimaryDark">@color/gris_200</item>
+        <item name="colorAccent">@color/gris_200</item>
     </style>
 
-    <style name="Theme.MAQUIRENTAPP" parent="Base.Theme.MAQUIRENTAPP" />
+    <style name="Base.Theme.MAQUIRENTAPP." parent="Base.Theme.MAQUIRENTAPP" />
+
+    <style name="EstiloTextoTitulo" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:shadowColor">@color/azul_200</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
 </resources>
