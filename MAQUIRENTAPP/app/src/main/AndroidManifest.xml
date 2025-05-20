@@ -13,6 +13,21 @@
         android:theme="@style/Theme.MAQUIRENTAPP"
         tools:targetApi="31">
         <activity
+            android:name=".ViewModel.Mantenimientos"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModel.GrupoElectrogeno"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModel.CGE"
+            android:exported="false" />
+        <activity
+            android:name=".ActividadCGE"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModel.Inicio"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
