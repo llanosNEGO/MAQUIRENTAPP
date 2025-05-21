@@ -1,4 +1,4 @@
-package com.example.maquirentapp.ViewModel;
+package com.example.maquirentapp.View;
 
 import android.os.Bundle;
 
@@ -10,14 +10,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.maquirentapp.R;
 
-public class CGE extends AppCompatActivity {
+public class GrupoElectrogeno extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_cge);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.CGE), (v, insets) -> {
+        setContentView(R.layout.ly_grupoelectrogeno);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
