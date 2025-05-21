@@ -10,32 +10,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MAQUIRENTAPP"
+        android:theme="@style/Base.Theme.MAQUIRENTAPP"
         tools:targetApi="31">
+
         <activity
-            android:name=".ViewModel.Mantenimientos"
-            android:exported="false" />
-        <activity
-            android:name=".ViewModel.GrupoElectrogeno"
-            android:exported="false" />
-        <activity
-            android:name=".ViewModel.CGE"
-            android:exported="false" />
-        <activity
-            android:name=".ActividadCGE"
-            android:exported="false" />
-        <activity
-            android:name=".ViewModel.Inicio"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".View.Loader"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity
+            android:name=".View.Loader"
+            android:exported="false" />
     </application>
 
 </manifest>
