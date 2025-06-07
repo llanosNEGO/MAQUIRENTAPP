@@ -8,7 +8,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.maquirentapp.View.Cge;
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +22,20 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    @Override
+    protected int getHeaderIcon() {
+        return R.drawable.icon_home_blanco;
+    }
+
+    @Override
+    protected String getHeaderTitle() {
+        return "Inicio";
+    }
+
+    @Override
+    protected int getContentLayoutId() {
+        return R.layout.activity_main;
     }
 }

@@ -55,9 +55,9 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_mantenimiento"
                         android:layout_marginEnd="16dp"
-                        android:contentDescription="Icono Mantenimiento" />
+                        android:contentDescription="Icono Mantenimiento"
+                        android:src="@drawable/icon_mantenimiento_blanco" />
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -103,9 +103,9 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_historial"
                         android:layout_marginEnd="16dp"
-                        android:contentDescription="Icono Historial" />
+                        android:contentDescription="Icono Historial"
+                        android:src="@drawable/icon_alquiler_blanco" />
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -149,9 +149,9 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_info"
                         android:layout_marginEnd="16dp"
-                        android:contentDescription="Icono Información" />
+                        android:contentDescription="Icono Información"
+                        android:src="@drawable/icon_informacion_blanco" />
 
                     <LinearLayout
                         android:orientation="vertical"

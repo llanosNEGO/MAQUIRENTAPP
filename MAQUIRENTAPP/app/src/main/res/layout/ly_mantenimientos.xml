@@ -27,7 +27,7 @@
                 <ImageView
                     android:layout_width="126dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/IconNavbar2" />
+                    android:src="@drawable/icon_generador" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -101,32 +101,32 @@
                         <ImageView
                             android:layout_width="41dp"
                             android:layout_height="34dp"
-                            android:src="@drawable/filtroaceite" />
+                            android:src="@drawable/icon_aceite_blanco" />
 
                         <ImageView
                             android:layout_width="62dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/combustibleblanco" />
+                            android:src="@drawable/icon_combustible_blanco" />
 
                         <ImageView
                             android:layout_width="61dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/filtroaire" />
+                            android:src="@drawable/icon_filtro_aire_blanco" />
 
                         <ImageView
                             android:layout_width="51dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/separadorblanco" />
+                            android:src="@drawable/icon_separador_blanco" />
 
                         <ImageView
                             android:layout_width="59dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/refrigeranteblanco" />
+                            android:src="@drawable/icon_refrigerante_blanco" />
 
                         <ImageView
                             android:layout_width="56dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/tanqueblanco" />
+                            android:src="@drawable/icon_tanque_blanco" />
 
                     </LinearLayout>
                     <TextView
@@ -185,17 +185,17 @@
                         <ImageView
                             android:layout_width="41dp"
                             android:layout_height="34dp"
-                            android:src="@drawable/filtroaceite" />
+                            android:src="@drawable/icon_aceite_blanco" />
 
                         <ImageView
                             android:layout_width="62dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/combustibleblanco" />
+                            android:src="@drawable/icon_combustible_blanco" />
 
                         <ImageView
                             android:layout_width="61dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/filtroaire" />
+                            android:src="@drawable/icon_filtro_aire_blanco" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
