@@ -29,7 +29,7 @@
                 <ImageView
                     android:layout_width="126dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/IconNavbar2" />
+                    android:src="@drawable/icon_generador" />
 
                 <TextView
                     android:layout_width="wrap_content"
