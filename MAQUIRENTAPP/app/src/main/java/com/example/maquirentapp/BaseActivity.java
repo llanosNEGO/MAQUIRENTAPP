@@ -2,6 +2,7 @@ package com.example.maquirentapp;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import androidx.core.widget.NestedScrollView;
 public abstract class BaseActivity extends AppCompatActivity {
     protected ImageView headerIcon;
     protected TextView headerTitle;
-    protected LinearLayout contentContainer;
+    protected FrameLayout contentContainer;
     protected NestedScrollView scrollView;
 
     @Override
@@ -32,7 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     private void initViews() {
         headerIcon = findViewById(R.id.header_icon);
         headerTitle = findViewById(R.id.header_title);
-        contentContainer = findViewById(R.id.content_container);
+        contentContainer = findViewById(R.id.fragment_container);
         scrollView = findViewById(R.id.content_scroll_view);
     }
 
@@ -49,8 +50,14 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    protected abstract int getHeaderIcon();
-    protected abstract String getHeaderTitle();
+    protected int getHeaderIcon() {
+        return 0;
+    }
+
+    protected String getHeaderTitle() {
+        return "";
+    }
+
     protected abstract int getContentLayoutId();
 
     protected void setHeaderIcon(int iconResId) {
@@ -64,7 +71,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             headerTitle.setText(title);
         }
     }
-    protected LinearLayout getContentContainer() {
+    protected FrameLayout getContentContainer() {
         return contentContainer;
     }
 

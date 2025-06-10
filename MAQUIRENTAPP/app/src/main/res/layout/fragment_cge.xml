@@ -5,44 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gris_100"
-    tools:context=".View.Cge">
-
-    <!-- Barra superior -->
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#000000"
-            app:title="GEP 110-103"
-            app:titleTextColor="@color/white">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="126dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/icon_generador" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Control de grupos electrogenos"
-                    android:textColor="#FFFFFF"
-                    android:textSize="22dp"
-                    android:textStyle="bold"
-                    android:visibility="visible" />
-
-            </LinearLayout>
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+    android:background="@color/gris_100">
 
     <!-- CONTENT-->
 
@@ -54,7 +17,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
             android:background="#F5F2EF">
 
             <!-- Tarjeta 1-->
