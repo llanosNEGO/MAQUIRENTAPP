@@ -33,7 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     private void initViews() {
         headerIcon = findViewById(R.id.header_icon);
         headerTitle = findViewById(R.id.header_title);
-        contentContainer = findViewById(R.id.fragment_container);
+        contentContainer = findViewById(R.id.nav_host_fragment);
         scrollView = findViewById(R.id.content_scroll_view);
     }
 
