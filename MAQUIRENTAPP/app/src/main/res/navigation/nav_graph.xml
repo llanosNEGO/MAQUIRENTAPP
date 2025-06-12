@@ -12,18 +12,27 @@
 
         <action
             android:id="@+id/action_home_to_CGE"
-            app:destination="@+id/cgeFragment" />
+            app:destination="@+id/cgeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
 
         <action
             android:id="@+id/action_homeFragment_to_nuevoAlquilerFragment"
-            app:destination="@id/nuevoAlquilerFragment" />
+            app:destination="@id/nuevoAlquilerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
 
         <action
             android:id="@+id/action_home_to_Perfil"
-            app:destination="@id/perfilFragment" />
-        <!--        <action-->
-        <!--            android:id="@+id/action_homeFragment_to_cotizacionesFragment"-->
-        <!--            app:destination="@id/cotizacionesFragment" />-->
+            app:destination="@id/perfilFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -33,27 +42,47 @@
 
         <action
             android:id="@+id/action_cge_to_Inicio"
-            app:destination="@+id/homeFragment"/>
+            app:destination="@+id/homeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
 
         <action
             android:id="@+id/action_cge_to_Perfil"
-            app:destination="@+id/perfilFragment"/>
+            app:destination="@+id/perfilFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
         android:id="@+id/perfilFragment"
         android:name="com.example.maquirentapp.PerfilFragment"
-        tools:layout="@layout/fragment_perfil" />
+        tools:layout="@layout/fragment_perfil">
+
+        <!-- Acciones para navegar desde Perfil a otros fragments -->
+        <action
+            android:id="@+id/action_perfil_to_home"
+            app:destination="@+id/homeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+
+        <action
+            android:id="@+id/action_perfil_to_cge"
+            app:destination="@+id/cgeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
 
     <fragment
         android:id="@+id/nuevoAlquilerFragment"
         android:name="com.example.maquirentapp.NuevoAlquilerDiaFragment"
         tools:layout="@layout/fragment_nuevo_alquiler_dia" />
-
-    <!--    <fragment-->
-    <!--        android:id="@+id/cotizacionesFragment"-->
-    <!--        android:name="com.tuapp.CotizacionesFragment"-->
-    <!--        tools:layout="@layout/fragment_cotizaciones" -->
-    <!--        />-->
 
 </navigation>

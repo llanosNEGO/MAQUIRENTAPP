@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -65,13 +66,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupInitialState() {
-        // Configurar estado inicial - Home seleccionado
         currentSelectedIndicator = navHome;
         updateNavigationUI(0);
     }
 
     private void setupNavigation() {
-        // Obtener NavHostFragment y NavController
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment);
 
@@ -92,20 +91,23 @@ public class MainActivity extends AppCompatActivity {
                     setHeaderTitle("Perfil");
                     setHeaderIcon(R.drawable.icon_perfil_blanco);
                     updateNavigationUI(2);
+                } else if (dest.getId() == R.id.nuevoAlquilerFragment) {
+                    setHeaderTitle("Nuevo alquiler por día(s)");
+                    setHeaderIcon(R.drawable.icon_contrato_blanco);
                 }
             });
 
-            // Configurar clicks de navegación
+            // Configurar clicks de navegación con animaciones inteligentes
             navHome.setOnClickListener(v -> {
-                navController.navigate(R.id.homeFragment);
+                navigateWithAnimation(navController, R.id.homeFragment, 0);
             });
 
             navRent.setOnClickListener(v -> {
-                navController.navigate(R.id.cgeFragment);
+                navigateWithAnimation(navController, R.id.cgeFragment, 1);
             });
 
             navPerfil.setOnClickListener(v -> {
-                navController.navigate(R.id.perfilFragment);
+                navigateWithAnimation(navController, R.id.perfilFragment, 2);
             });
 
             // Configurar botón de retroceso
@@ -118,9 +120,40 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void navigateWithAnimation(NavController navController, int destinationId, int targetIndex) {
+        // Solo navegar si no estamos ya en ese destino
+        if (navController.getCurrentDestination() != null &&
+                navController.getCurrentDestination().getId() == destinationId) {
+            return;
+        }
+
+        // Crear NavOptions con animaciones personalizadas basadas en la dirección
+        NavOptions.Builder navOptionsBuilder = new NavOptions.Builder();
+
+        // Determinar la dirección de la animación basada en los índices
+        if (targetIndex > currentSelectedIndex) {
+            // Navegar hacia la derecha
+            navOptionsBuilder
+                    .setEnterAnim(R.anim.slide_in_right)
+                    .setExitAnim(R.anim.slide_out_left)
+                    .setPopEnterAnim(R.anim.slide_in_left)
+                    .setPopExitAnim(R.anim.slide_out_right);
+        } else {
+            // Navegar hacia la izquierda
+            navOptionsBuilder
+                    .setEnterAnim(R.anim.slide_in_left)
+                    .setExitAnim(R.anim.slide_out_right)
+                    .setPopEnterAnim(R.anim.slide_in_right)
+                    .setPopExitAnim(R.anim.slide_out_left);
+        }
+
+        NavOptions navOptions = navOptionsBuilder.build();
+        navController.navigate(destinationId, null, navOptions);
+    }
+
     private void updateNavigationUI(int selectedIndex) {
         if (selectedIndex == currentSelectedIndex) {
-            return; // No hacer nada si ya está seleccionado
+            return;
         }
 
         // Animar la transición del indicador
