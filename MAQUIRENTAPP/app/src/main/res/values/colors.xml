@@ -16,8 +16,8 @@
     <color name="text_secondary">#666666</color>
 
     <!-- Colores de acento -->
-    <color name="red_accent">#FF4444</color>
-    <color name="yellow_accent">#FFD700</color>
+    <color name="red_accent">#F65D5D</color>
+    <color name="yellow_accent">#F6B65D</color>
 
     <!-- Colores adicionales -->
     <color name="black">#1E1E1E</color>

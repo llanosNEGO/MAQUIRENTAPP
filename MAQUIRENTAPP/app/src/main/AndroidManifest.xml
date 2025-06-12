@@ -16,9 +16,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".BaseActivity"
-            android:exported="false" />
-        <activity
             android:name=".View.Mantenimientos"
             android:exported="false" />
         <activity

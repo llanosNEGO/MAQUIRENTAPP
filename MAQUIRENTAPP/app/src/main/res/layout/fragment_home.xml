@@ -34,7 +34,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="16dp"
         app:cardElevation="2dp">
@@ -59,8 +61,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_marginEnd="8dp"
                         android:src="@drawable/icon_ojo_negro" />
 
@@ -69,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:text="Mostrar total"
                         android:textColor="@color/text_primary"
-                        android:textSize="14sp" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -83,7 +85,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
         android:text="Maquinaria alquilada por días"
         android:textColor="@color/text_primary"
         android:textSize="18sp" />
@@ -93,7 +95,8 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="20dp"
+        android:clipToPadding="false"
         android:scrollbars="none">
 
         <LinearLayout
@@ -137,14 +140,14 @@
                             android:layout_weight="1"
                             android:text="GEP 14-101"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="↑ 15/04/2025"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -160,14 +163,14 @@
                             android:layout_weight="1"
                             android:text="S/.300"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="↓ 18/04/2025"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -177,7 +180,7 @@
                         android:layout_marginBottom="16dp"
                         android:text="Horómetro máximo: 4 569 h."
                         android:textColor="@color/white"
-                        android:textSize="12sp" />
+                        android:textSize="16sp" />
 
                     <!-- Iconos -->
                     <LinearLayout
@@ -187,45 +190,47 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_extension_caja_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_embudo" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_bidon_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_cable_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_fajas_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_llaves_puerta_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_llave_hexagonal_blanco" />
+
 
                     </LinearLayout>
 
@@ -269,14 +274,14 @@
                             android:layout_weight="1"
                             android:text="GEP 14-101"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="↑ 15/04/2025"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -292,14 +297,14 @@
                             android:layout_weight="1"
                             android:text="S/.300"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="↓ 18/04/2025"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -309,7 +314,7 @@
                         android:layout_marginBottom="16dp"
                         android:text="Horómetro máximo: 4 569 h."
                         android:textColor="@color/white"
-                        android:textSize="12sp" />
+                        android:textSize="16sp" />
 
                     <!-- Iconos -->
                     <LinearLayout
@@ -319,52 +324,53 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_extension_caja_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_embudo" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_bidon_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_cable_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_fajas_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_llaves_puerta_blanco" />
 
                         <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="5dp"
                             android:src="@drawable/icon_llave_hexagonal_blanco" />
+
 
                     </LinearLayout>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-            <!-- Puedes agregar más tarjetas aquí -->
 
         </LinearLayout>
 
@@ -373,7 +379,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
         android:text="Pagos pendientes"
         android:textColor="@color/text_primary"
         android:textSize="18sp" />
@@ -381,7 +387,7 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="20dp"
         android:scrollbars="none">
 
         <LinearLayout
@@ -405,7 +411,7 @@
 
                     <!-- Barra de color rojo -->
                     <View
-                        android:layout_width="6dp"
+                        android:layout_width="10dp"
                         android:layout_height="match_parent"
                         android:background="@color/red_accent" />
 
@@ -418,19 +424,19 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
+                            android:layout_marginBottom="5dp"
                             android:text="Colonia Ingenieros"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+                            android:layout_marginBottom="10dp"
                             android:text="GEP 30-103 | Septiembre"
                             android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -438,14 +444,14 @@
                             android:layout_marginBottom="4dp"
                             android:text="Monto pendiente de mes: S/.1200"
                             android:textColor="@color/white"
-                            android:textSize="12sp" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Monto pendiente de HE: S/.100"
                             android:textColor="@color/white"
-                            android:textSize="12sp" />
+                            android:textSize="14sp" />
 
                     </LinearLayout>
 
@@ -453,7 +459,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- Tarjeta Pago Pendiente 2 (amarilla) -->
+            <!-- Tarjeta Pago Pendiente 2 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
@@ -467,9 +473,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <!-- Barra de color amarillo -->
+                    <!-- Barra de color rojo -->
                     <View
-                        android:layout_width="6dp"
+                        android:layout_width="10dp"
                         android:layout_height="match_parent"
                         android:background="@color/yellow_accent" />
 
@@ -482,34 +488,34 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:text="Proyecto Ejemplo"
+                            android:layout_marginBottom="5dp"
+                            android:text="Colonia Ingenieros"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
-                            android:text="GEP 25-205 | Octubre"
+                            android:layout_marginBottom="10dp"
+                            android:text="GEP 30-103 | Septiembre"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="Monto pendiente de mes: S/.1200"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:text="Monto pendiente de mes: S/.800"
+                            android:text="Monto pendiente de HE: S/.100"
                             android:textColor="@color/white"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Monto pendiente de HE: S/.50"
-                            android:textColor="@color/white"
-                            android:textSize="12sp" />
+                            android:textSize="14sp" />
 
                     </LinearLayout>
 
@@ -524,11 +530,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
         android:text="Accesos directos"
         android:textColor="@color/text_primary"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="18sp" />
 
     <!--Accesos directos -->
     <LinearLayout
