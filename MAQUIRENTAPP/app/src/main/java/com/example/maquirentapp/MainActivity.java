@@ -12,10 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.core.widget.NestedScrollView;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.NavOptions;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.maquirentapp.ViewModel.ScrollStateViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,9 +28,22 @@ public class MainActivity extends AppCompatActivity {
     private TextView headerTitle;
     private ImageView headerIcon;
 
+    private NestedScrollView contentScrollView;
+    private ScrollStateViewModel scrollViewModel;
+
     // Para el indicador animado
     private View currentSelectedIndicator;
     private int currentSelectedIndex = 0; // 0: home, 1: rent, 2: perfil
+
+    private int previousDestinationId = R.id.homeFragment;
+
+    // Keys para identificar cada fragment
+    private static final String HOME_FRAGMENT_KEY = "home_fragment";
+    private static final String CGE_FRAGMENT_KEY = "cge_fragment";
+    private static final String PERFIL_FRAGMENT_KEY = "perfil_fragment";
+    private static final String NUEVO_ALQUILER_DIA_KEY = "nuevo_alquiler_dia_fragment";
+    private static final String PLANOS_CAMBIO_VOLTAJE_KEY = "planos_cambio_voltaje_fragment";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        scrollViewModel = new ViewModelProvider(this).get(ScrollStateViewModel.class);
 
         // Configurar window insets
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -55,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         headerTitle = findViewById(R.id.header_title);
         headerIcon = findViewById(R.id.header_icon);
+        contentScrollView = findViewById(R.id.content_scroll_view);
 
         navHome = findViewById(R.id.nav_home);
         navRent = findViewById(R.id.nav_rent);
@@ -79,22 +99,32 @@ public class MainActivity extends AppCompatActivity {
 
             // Listener para cambios de destino
             navController.addOnDestinationChangedListener((ctrl, dest, args) -> {
+                saveScrollPositionForDestination(previousDestinationId);
                 if (dest.getId() == R.id.homeFragment) {
                     setHeaderTitle("Inicio");
                     setHeaderIcon(R.drawable.icon_home_blanco);
                     updateNavigationUI(0);
+                    restoreScrollPosition(HOME_FRAGMENT_KEY);
                 } else if (dest.getId() == R.id.cgeFragment) {
                     setHeaderTitle("CGE");
                     setHeaderIcon(R.drawable.icon_generador);
                     updateNavigationUI(1);
+                    restoreScrollPosition(CGE_FRAGMENT_KEY);
                 } else if (dest.getId() == R.id.perfilFragment) {
                     setHeaderTitle("Perfil");
                     setHeaderIcon(R.drawable.icon_perfil_blanco);
                     updateNavigationUI(2);
+                    restoreScrollPosition(PERFIL_FRAGMENT_KEY);
                 } else if (dest.getId() == R.id.nuevoAlquilerFragment) {
                     setHeaderTitle("Nuevo alquiler por día(s)");
                     setHeaderIcon(R.drawable.icon_contrato_blanco);
+                    contentScrollView.scrollTo(0, 0);
+                } else if (dest.getId() == R.id.planosCambioVoltajeFragment) {
+                    setHeaderTitle("Planos de cambio de voltaje");
+                    setHeaderIcon(R.drawable.icon_voltaje_blanco);
+                    contentScrollView.scrollTo(0, 0);
                 }
+                previousDestinationId = dest.getId();
             });
 
             // Configurar clicks de navegación con animaciones inteligentes
@@ -119,6 +149,43 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
+
+    private void saveScrollPositionForDestination(int destinationId) {
+        if (contentScrollView != null) {
+            int currentScrollY = contentScrollView.getScrollY();
+            String fragmentKey = getFragmentKeyByDestinationId(destinationId);
+
+            if (fragmentKey != null) {
+                scrollViewModel.saveScrollPosition(fragmentKey, currentScrollY);
+            }
+        }
+    }
+    private void restoreScrollPosition(String fragmentKey) {
+        if (contentScrollView != null) {
+            int savedPosition = scrollViewModel.getScrollPosition(fragmentKey);
+
+            // Usar post para asegurar que el contenido se ha cargado
+            contentScrollView.post(() -> {
+                contentScrollView.scrollTo(0, savedPosition);
+            });
+        }
+    }
+    private String getFragmentKeyByDestinationId(int destinationId) {
+        if (destinationId == R.id.homeFragment) {
+            return HOME_FRAGMENT_KEY;
+        } else if (destinationId == R.id.cgeFragment) {
+            return CGE_FRAGMENT_KEY;
+        } else if (destinationId == R.id.perfilFragment) {
+            return PERFIL_FRAGMENT_KEY;
+        } else if (destinationId == R.id.nuevoAlquilerFragment) {
+            return NUEVO_ALQUILER_DIA_KEY;
+        } else if (destinationId == R.id.planosCambioVoltajeFragment) {
+            return PLANOS_CAMBIO_VOLTAJE_KEY;
+        } else {
+            return null;
+        }
+    }
+
 
     private void navigateWithAnimation(NavController navController, int destinationId, int targetIndex) {
         // Solo navegar si no estamos ya en ese destino

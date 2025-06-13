@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.maquirentapp.HomeFragment"
+        android:name="com.example.maquirentapp.View.HomeFragment"
         tools:layout="@layout/fragment_home">
 
         <action
@@ -33,11 +33,27 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_home_to_PlanosCambioVoltajeFragment"
+            app:destination="@+id/planosCambioVoltajeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/planosCambioVoltajeFragment"
+        android:name="com.example.maquirentapp.View.PlanosCambioVoltajeFragment"
+        tools:layout="@layout/fragment_planos_cambio_voltaje">
+
     </fragment>
 
     <fragment
         android:id="@+id/cgeFragment"
-        android:name="com.example.maquirentapp.CGEFragment"
+        android:name="com.example.maquirentapp.View.CGEFragment"
         tools:layout="@layout/fragment_cge">
 
         <action
@@ -59,7 +75,7 @@
 
     <fragment
         android:id="@+id/perfilFragment"
-        android:name="com.example.maquirentapp.PerfilFragment"
+        android:name="com.example.maquirentapp.View.PerfilFragment"
         tools:layout="@layout/fragment_perfil">
 
         <!-- Acciones para navegar desde Perfil a otros fragments -->
@@ -82,7 +98,7 @@
 
     <fragment
         android:id="@+id/nuevoAlquilerFragment"
-        android:name="com.example.maquirentapp.NuevoAlquilerDiaFragment"
+        android:name="com.example.maquirentapp.View.NuevoAlquilerDiaFragment"
         tools:layout="@layout/fragment_nuevo_alquiler_dia" />
 
 </navigation>
