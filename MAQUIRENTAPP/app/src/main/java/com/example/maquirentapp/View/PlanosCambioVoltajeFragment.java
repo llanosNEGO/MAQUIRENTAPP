@@ -1,4 +1,4 @@
-package com.example.maquirentapp;
+package com.example.maquirentapp.View;
 
 import android.os.Bundle;
 
@@ -8,22 +8,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class NuevoAlquilerDiaFragment extends Fragment {
+import com.example.maquirentapp.R;
 
-    public NuevoAlquilerDiaFragment() {
+public class PlanosCambioVoltajeFragment extends Fragment {
+
+
+    public PlanosCambioVoltajeFragment() {
         // Required empty public constructor
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nuevo_alquiler_dia, container, false);
+        return inflater.inflate(R.layout.fragment_planos_cambio_voltaje, container, false);
     }
 }

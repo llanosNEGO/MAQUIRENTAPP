@@ -1,4 +1,4 @@
-package com.example.maquirentapp;
+package com.example.maquirentapp.View;
 
 import android.os.Bundle;
 
@@ -6,12 +6,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.maquirentapp.R;
+import com.example.maquirentapp.ViewModel.ScrollStateViewModel;
 
 public class HomeFragment extends Fragment {
 
@@ -38,6 +44,7 @@ public class HomeFragment extends Fragment {
 
         CardView cardNuevoAlquiler = view.findViewById(R.id.cardNuevoAlquiler);
         CardView cardCotizaciones = view.findViewById(R.id.cardCotizaciones);
+        CardView cardPlanosCambioVoltaje = view.findViewById(R.id.cardPlanosVoltaje);
 
         NavController navController = Navigation.findNavController(view);
 
@@ -47,6 +54,8 @@ public class HomeFragment extends Fragment {
 //        cardCotizaciones.setOnClickListener(v ->
 //                navController.navigate(R.id.action_homeFragment_to_cotizacionesFragment));
 
-    }
+        cardPlanosCambioVoltaje.setOnClickListener(v -> navController.navigate(R.id.action_home_to_PlanosCambioVoltajeFragment));
 
+
+    }
 }
