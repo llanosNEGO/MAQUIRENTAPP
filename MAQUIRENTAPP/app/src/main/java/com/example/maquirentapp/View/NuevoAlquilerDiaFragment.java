@@ -28,7 +28,4 @@ public class NuevoAlquilerDiaFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_fichas_tecnicas, container, false);
     }
-
-    public class NuevoAlquilerViewHolder {
-    }
 }

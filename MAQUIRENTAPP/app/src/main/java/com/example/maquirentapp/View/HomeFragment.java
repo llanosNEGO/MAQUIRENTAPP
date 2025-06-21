@@ -45,6 +45,7 @@ public class HomeFragment extends Fragment {
         CardView cardNuevoAlquiler = view.findViewById(R.id.cardNuevoAlquiler);
         CardView cardCotizaciones = view.findViewById(R.id.cardCotizaciones);
         CardView cardPlanosCambioVoltaje = view.findViewById(R.id.cardPlanosVoltaje);
+        CardView cardFichasTecnicas = view.findViewById(R.id.cardFichasTecnicas);
 
         NavController navController = Navigation.findNavController(view);
 
@@ -55,6 +56,8 @@ public class HomeFragment extends Fragment {
 //                navController.navigate(R.id.action_homeFragment_to_cotizacionesFragment));
 
         cardPlanosCambioVoltaje.setOnClickListener(v -> navController.navigate(R.id.action_home_to_PlanosCambioVoltajeFragment));
+
+        cardFichasTecnicas.setOnClickListener(v -> navController.navigate(R.id.action_home_to_FichasTecnicasFragment));
 
 
     }
