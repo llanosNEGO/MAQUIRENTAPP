@@ -86,7 +86,6 @@
         android:name="com.example.maquirentapp.View.PerfilFragment"
         tools:layout="@layout/fragment_perfil">
 
-        <!-- Acciones para navegar desde Perfil a otros fragments -->
         <action
             android:id="@+id/action_perfil_to_home"
             app:destination="@+id/homeFragment"
@@ -111,7 +110,7 @@
 
     <fragment
         android:id="@+id/fichasTecnicasFragment"
-        android:name="com.example.maquirentapp.View.NuevoAlquilerDiaFragment"
-        tools:layout="@layout/fragment_nuevo_alquiler_dia"/>
+        android:name="com.example.maquirentapp.View.FichasTecnicasFragment"
+        tools:layout="@layout/fragment_fichas_tecnicas"/>
 
 </navigation>

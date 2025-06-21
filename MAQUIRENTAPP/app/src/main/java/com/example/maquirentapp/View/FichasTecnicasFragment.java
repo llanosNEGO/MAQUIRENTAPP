@@ -10,22 +10,21 @@ import android.view.ViewGroup;
 
 import com.example.maquirentapp.R;
 
-public class NuevoAlquilerDiaFragment extends Fragment {
+public class FichasTecnicasFragment extends Fragment {
 
-    public NuevoAlquilerDiaFragment() {
+    public FichasTecnicasFragment() {
         // Required empty public constructor
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nuevo_alquiler_dia, container, false);
+        return inflater.inflate(R.layout.fragment_fichas_tecnicas, container, false);
     }
 }

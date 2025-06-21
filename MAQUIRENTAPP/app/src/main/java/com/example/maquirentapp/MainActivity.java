@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     updateNavigationUI(0);
                     restoreScrollPosition(HOME_FRAGMENT_KEY);
                 } else if (dest.getId() == R.id.cgeFragment) {
-                    setHeaderTitle("CGE");
+                    setHeaderTitle("Control de grupos electrógenos");
                     setHeaderIcon(R.drawable.icon_generador);
                     updateNavigationUI(1);
                     restoreScrollPosition(CGE_FRAGMENT_KEY);
@@ -120,6 +120,11 @@ public class MainActivity extends AppCompatActivity {
                 } else if (dest.getId() == R.id.planosCambioVoltajeFragment) {
                     setHeaderTitle("Planos de cambio de voltaje");
                     setHeaderIcon(R.drawable.icon_voltaje_blanco);
+                    contentScrollView.scrollTo(0, 0);
+                }
+                else if(dest.getId() == R.id.fichasTecnicasFragment){
+                    setHeaderTitle("Fichas técnicas");
+                    setHeaderIcon(R.drawable.icon_ficha_tecnica_blanco);
                     contentScrollView.scrollTo(0, 0);
                 }
                 previousDestinationId = dest.getId();
