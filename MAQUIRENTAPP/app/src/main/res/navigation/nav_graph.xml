@@ -42,6 +42,14 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
 
+
+        <action
+            android:id="@+id/action_home_to_FichasTecnicasFragment"
+            app:destination="@+id/fichasTecnicasFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -100,5 +108,10 @@
         android:id="@+id/nuevoAlquilerFragment"
         android:name="com.example.maquirentapp.View.NuevoAlquilerDiaFragment"
         tools:layout="@layout/fragment_nuevo_alquiler_dia" />
+
+    <fragment
+        android:id="@+id/fichasTecnicasFragment"
+        android:name="com.example.maquirentapp.View.NuevoAlquilerDiaFragment"
+        tools:layout="@layout/fragment_nuevo_alquiler_dia"/>
 
 </navigation>
