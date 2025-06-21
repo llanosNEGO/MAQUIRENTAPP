@@ -127,6 +127,14 @@ public class MainActivity extends AppCompatActivity {
                     setHeaderIcon(R.drawable.icon_ficha_tecnica_blanco);
                     contentScrollView.scrollTo(0, 0);
                 }
+                else if(dest.getId() == R.id.grupoElectrogenoFragment){
+                    String codigo = args != null
+                            ? args.getString("codigo", "GEP")
+                            : "GEP";
+                    setHeaderTitle(codigo);
+                    setHeaderIcon(R.drawable.icon_generador);
+                    contentScrollView.scrollTo(0, 0);
+                }
                 previousDestinationId = dest.getId();
             });
 

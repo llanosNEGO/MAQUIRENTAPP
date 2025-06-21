@@ -1,4 +1,6 @@
-<androidx.cardview.widget.CardView android:layout_marginBottom="16dp"
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardGrupoElectrogeno"
+    android:layout_marginBottom="16dp"
     app:cardCornerRadius="12dp"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"

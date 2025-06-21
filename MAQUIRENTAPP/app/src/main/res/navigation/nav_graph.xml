@@ -53,13 +53,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/planosCambioVoltajeFragment"
-        android:name="com.example.maquirentapp.View.PlanosCambioVoltajeFragment"
-        tools:layout="@layout/fragment_planos_cambio_voltaje">
-
-    </fragment>
-
-    <fragment
         android:id="@+id/cgeFragment"
         android:name="com.example.maquirentapp.View.CGEFragment"
         tools:layout="@layout/fragment_cge">
@@ -79,6 +72,37 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_cge_to_grupoElectrogeno"
+            app:destination="@+id/grupoElectrogenoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/grupoElectrogenoFragment"
+        android:name="com.example.maquirentapp.View.GrupoElectrogenoFragment"
+        tools:layout="@layout/fragment_grupo_electrogeno">
+        <argument
+            android:name="codigo"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mantenimientosFragment"
+        android:name="com.example.maquirentapp.View.MantenimientosFragment"
+        tools:layout="@layout/fragment_mantenimientos">
+    </fragment>
+
+    <fragment
+        android:id="@+id/planosCambioVoltajeFragment"
+        android:name="com.example.maquirentapp.View.PlanosCambioVoltajeFragment"
+        tools:layout="@layout/fragment_planos_cambio_voltaje">
+
     </fragment>
 
     <fragment
