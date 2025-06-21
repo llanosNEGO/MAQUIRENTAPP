@@ -99,6 +99,6 @@
     <fragment
         android:id="@+id/nuevoAlquilerFragment"
         android:name="com.example.maquirentapp.View.NuevoAlquilerDiaFragment"
-        tools:layout="@layout/fragment_nuevo_alquiler_dia" />
+        tools:layout="@layout/fragment_fichas_tecnicas" />
 
 </navigation>
