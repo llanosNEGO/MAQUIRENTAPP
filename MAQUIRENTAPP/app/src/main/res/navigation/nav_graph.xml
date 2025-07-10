@@ -90,12 +90,18 @@
         <argument
             android:name="codigo"
             app:argType="string" />
+        <action
+            android:id="@+id/action_grupoElectrogeno_to_mantenimientos"
+            app:destination="@id/mantenimientosFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/mantenimientosFragment"
         android:name="com.example.maquirentapp.View.MantenimientosFragment"
         tools:layout="@layout/fragment_mantenimientos">
+        <argument
+            android:name="codigo"
+            app:argType="string" />
     </fragment>
 
     <fragment

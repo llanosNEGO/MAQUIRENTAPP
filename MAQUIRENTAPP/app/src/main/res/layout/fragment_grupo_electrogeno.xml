@@ -16,13 +16,13 @@
 
         <!-- Card 1: Mantenimientos -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardMantenimientos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="8dp"
-            android:backgroundTint="#111111"
-            android:onClick="goToMantenimientos">
+            android:backgroundTint="@color/background_dark">
 
             <LinearLayout
                 android:layout_width="match_parent"

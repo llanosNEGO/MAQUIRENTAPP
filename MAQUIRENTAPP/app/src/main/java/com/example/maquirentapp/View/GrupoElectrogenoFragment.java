@@ -3,7 +3,9 @@ package com.example.maquirentapp.View;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +15,7 @@ import com.example.maquirentapp.R;
 
 
 public class GrupoElectrogenoFragment extends Fragment {
-
+    private String codigo;
     public GrupoElectrogenoFragment() {
         // Required empty public constructor
     }
@@ -21,7 +23,9 @@ public class GrupoElectrogenoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        if (getArguments() != null) {
+            codigo = getArguments().getString("codigo");
+        }
     }
 
     @Override
@@ -34,7 +38,14 @@ public class GrupoElectrogenoFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         String codigo = getArguments().getString("codigo");
-        // Usar 'codigo' para filtrar mantenimientos, etc.
+
+        CardView cardMantenimientos = view.findViewById(R.id.cardMantenimientos);
+        cardMantenimientos.setOnClickListener(v -> {
+            Bundle args = new Bundle();
+            args.putString("codigo", codigo);
+            Navigation.findNavController(view)
+                    .navigate(R.id.action_grupoElectrogeno_to_mantenimientos, args);
+        });
     }
 
 }

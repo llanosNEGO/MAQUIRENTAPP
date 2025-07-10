@@ -18,9 +18,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".View.Mantenimientos"
-            android:exported="false" />
-        <activity
             android:name=".View.Loader"
             android:exported="true">
             <intent-filter>
