@@ -12,11 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.maquirentapp.R;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-
-public class GrupoElectrogenoFragment extends Fragment {
+public class HistorialAlquilerMensualFragment extends Fragment {
     private String codigo;
-    public GrupoElectrogenoFragment() {
+    public HistorialAlquilerMensualFragment() {
         // Required empty public constructor
     }
 
@@ -32,29 +33,21 @@ public class GrupoElectrogenoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_grupo_electrogeno, container, false);
+        return inflater.inflate(R.layout.fragment_historial_alquiler_mensual, container, false);
     }
+
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         String codigo = getArguments().getString("codigo");
 
-        CardView cardMantenimientos = view.findViewById(R.id.cardMantenimientos);
-        CardView cardHistorialAlquilerMensual = view.findViewById(R.id.cardHistorialAlquilerMensual);
+        ExtendedFloatingActionButton btnAñadir = view.findViewById(R.id.btnAñadir);
 
-        cardMantenimientos.setOnClickListener(v -> {
+        btnAñadir.setOnClickListener(v -> {
             Bundle args = new Bundle();
             args.putString("codigo", codigo);
             Navigation.findNavController(view)
-                    .navigate(R.id.action_grupoElectrogeno_to_mantenimientos, args);
-        });
-
-        cardHistorialAlquilerMensual.setOnClickListener(v -> {
-            Bundle args = new Bundle();
-            args.putString("codigo", codigo);
-            Navigation.findNavController(view)
-                    .navigate(R.id.action_grupoElectrogeno_to_historialAlquilerMensual, args);
+                    .navigate(R.id.action_historialAlquilerMensual_to_nuevoAlquilerMensual, args);
         });
     }
-
 }

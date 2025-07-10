@@ -135,6 +135,21 @@ public class MainActivity extends AppCompatActivity {
                     setHeaderIcon(R.drawable.icon_generador);
                     contentScrollView.scrollTo(0, 0);
                 }
+                else if(dest.getId() == R.id.historialAlquilerMensualFragment){
+                    String codigo = args != null
+                            ? args.getString("codigo", "GEP")
+                            : "GEP";
+                    setHeaderIcon(R.drawable.icon_generador);
+                    setHeaderTitle("Historial de alquileres\n"+codigo);
+                }
+                else if(dest.getId() == R.id.nuevoAlquilerMensualFragment){
+                    String codigo = args != null
+                            ? args.getString("codigo", "GEP")
+                            : "GEP";
+                    setHeaderIcon(R.drawable.icon_generador);
+                    setHeaderTitle("Nuevo alquiler mensual\n"+codigo);
+                }
+
                 previousDestinationId = dest.getId();
             });
 

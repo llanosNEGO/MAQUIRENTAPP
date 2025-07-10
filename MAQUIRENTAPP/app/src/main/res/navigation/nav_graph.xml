@@ -92,7 +92,39 @@
             app:argType="string" />
         <action
             android:id="@+id/action_grupoElectrogeno_to_mantenimientos"
-            app:destination="@id/mantenimientosFragment" />
+            app:destination="@id/mantenimientosFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_grupoElectrogeno_to_historialAlquilerMensual"
+            app:destination="@+id/historialAlquilerMensualFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/historialAlquilerMensualFragment"
+        android:name="com.example.maquirentapp.View.HistorialAlquilerMensualFragment"
+        tools:layout="@layout/fragment_historial_alquiler_mensual">
+
+        <action
+            android:id="@+id/action_historialAlquilerMensual_to_nuevoAlquilerMensual"
+            app:destination="@+id/nuevoAlquilerMensualFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nuevoAlquilerMensualFragment"
+        android:name="com.example.maquirentapp.View.NuevoAlquilerMensualFragment"
+        tools:layout="@layout/fragment_nuevo_alquiler_mensual">
+
     </fragment>
 
     <fragment
