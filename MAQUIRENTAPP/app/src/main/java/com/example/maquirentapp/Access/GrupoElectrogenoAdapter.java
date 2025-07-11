@@ -17,7 +17,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GrupoElectrogenoAdapter extends RecyclerView.Adapter<GrupoElectrogenoAdapter.VH> {
+    public interface OnItemClickListener {
+        void onItemClick(GrupoElectrogeno grupo);
+    }
     private final List<GrupoElectrogeno> items = new ArrayList<>();
+    private final OnItemClickListener listener;
+    public GrupoElectrogenoAdapter(OnItemClickListener listener) {
+        this.listener = listener;
+    }
     public void setItems(List<GrupoElectrogeno> nuevos) {
         items.clear();
         items.addAll(nuevos);
@@ -29,6 +36,7 @@ public class GrupoElectrogenoAdapter extends RecyclerView.Adapter<GrupoElectroge
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_generador_cge, parent, false);
         return new VH(v);
+
     }
     @Override public void onBindViewHolder(@NonNull VH h, int pos) {
         GrupoElectrogeno g = items.get(pos);
@@ -36,6 +44,7 @@ public class GrupoElectrogenoAdapter extends RecyclerView.Adapter<GrupoElectroge
         Glide.with(h.imgFoto.getContext())
                 .load(g.getFoto())
                 .into(h.imgFoto);
+        h.itemView.setOnClickListener(v -> listener.onItemClick(g));
     }
     @Override public int getItemCount() { return items.size(); }
     static class VH extends RecyclerView.ViewHolder {

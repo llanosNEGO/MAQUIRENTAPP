@@ -2,7 +2,10 @@ package com.example.maquirentapp.View;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -45,12 +48,22 @@ public class CGEFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        NavController navController = Navigation.findNavController(view);
+
         recyclerView = view.findViewById(R.id.recycler_grupos_electrogenos);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter = new GrupoElectrogenoAdapter();
+        adapter = new GrupoElectrogenoAdapter(grupo -> {
+            Bundle args = new Bundle();
+            args.putString("codigo", grupo.getCodigo());
+            navController.navigate(
+                    R.id.action_cge_to_grupoElectrogeno,
+                    args
+            );
+        });
         recyclerView.setAdapter(adapter);
 
         fetchGruposElectrogenos();
+
     }
 
     private void fetchGruposElectrogenos() {

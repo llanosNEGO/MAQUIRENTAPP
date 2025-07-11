@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     updateNavigationUI(0);
                     restoreScrollPosition(HOME_FRAGMENT_KEY);
                 } else if (dest.getId() == R.id.cgeFragment) {
-                    setHeaderTitle("CGE");
+                    setHeaderTitle("Control de grupos electrógenos");
                     setHeaderIcon(R.drawable.icon_generador);
                     updateNavigationUI(1);
                     restoreScrollPosition(CGE_FRAGMENT_KEY);
@@ -122,6 +122,34 @@ public class MainActivity extends AppCompatActivity {
                     setHeaderIcon(R.drawable.icon_voltaje_blanco);
                     contentScrollView.scrollTo(0, 0);
                 }
+                else if(dest.getId() == R.id.fichasTecnicasFragment){
+                    setHeaderTitle("Fichas técnicas");
+                    setHeaderIcon(R.drawable.icon_ficha_tecnica_blanco);
+                    contentScrollView.scrollTo(0, 0);
+                }
+                else if(dest.getId() == R.id.grupoElectrogenoFragment){
+                    String codigo = args != null
+                            ? args.getString("codigo", "GEP")
+                            : "GEP";
+                    setHeaderTitle(codigo);
+                    setHeaderIcon(R.drawable.icon_generador);
+                    contentScrollView.scrollTo(0, 0);
+                }
+                else if(dest.getId() == R.id.historialAlquilerMensualFragment){
+                    String codigo = args != null
+                            ? args.getString("codigo", "GEP")
+                            : "GEP";
+                    setHeaderIcon(R.drawable.icon_generador);
+                    setHeaderTitle("Historial de alquileres\n"+codigo);
+                }
+                else if(dest.getId() == R.id.nuevoAlquilerMensualFragment){
+                    String codigo = args != null
+                            ? args.getString("codigo", "GEP")
+                            : "GEP";
+                    setHeaderIcon(R.drawable.icon_generador);
+                    setHeaderTitle("Nuevo alquiler mensual\n"+codigo);
+                }
+
                 previousDestinationId = dest.getId();
             });
 

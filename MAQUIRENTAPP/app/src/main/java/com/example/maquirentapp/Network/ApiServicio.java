@@ -8,10 +8,13 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface ApiServicio {
     @GET("GruposElectrogenos")
     Call<List<GrupoElectrogeno>>GetGruposElectrogenos();
     @POST("GruposElectrogenos")
     Call<GrupoElectrogeno>PostGrupoElectrogeno(@Body GrupoElectrogeno grupoElectrogeno);
+
+
 }

@@ -1,0 +1,53 @@
+package com.example.maquirentapp.View;
+
+import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.example.maquirentapp.R;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+public class HistorialAlquilerMensualFragment extends Fragment {
+    private String codigo;
+    public HistorialAlquilerMensualFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            codigo = getArguments().getString("codigo");
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_historial_alquiler_mensual, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        String codigo = getArguments().getString("codigo");
+
+        ExtendedFloatingActionButton btnAñadir = view.findViewById(R.id.btnAñadir);
+
+        btnAñadir.setOnClickListener(v -> {
+            Bundle args = new Bundle();
+            args.putString("codigo", codigo);
+            Navigation.findNavController(view)
+                    .navigate(R.id.action_historialAlquilerMensual_to_nuevoAlquilerMensual, args);
+        });
+    }
+}
