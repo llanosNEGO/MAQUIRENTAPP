@@ -1,5 +1,6 @@
 package com.example.maquirentapp.Network;
 
+import com.example.maquirentapp.Model.AlquilerDia;
 import com.example.maquirentapp.Model.GrupoElectrogeno;
 
 import java.util.List;
@@ -16,5 +17,6 @@ public interface ApiServicio {
     @POST("GruposElectrogenos")
     Call<GrupoElectrogeno>PostGrupoElectrogeno(@Body GrupoElectrogeno grupoElectrogeno);
 
-
+    @POST("AlquileresDia")
+    Call<AlquilerDia> crearAlquilerDia(@Body AlquilerDia alquilerDia);
 }

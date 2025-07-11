@@ -51,7 +51,7 @@
                     android:theme="@style/SpinnerTheme"/>
             </LinearLayout>
 
-            <!-- Empresa que alquila el equipo -->
+            <!-- Cliente que alquila el equipo -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
@@ -63,6 +63,7 @@
                 android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/clienteEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Empresa que alquila el equipo"/>
@@ -80,6 +81,7 @@
                 android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ubicacionEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Lugar de trabajo del equipo"/>
@@ -105,10 +107,11 @@
                     android:layout_marginEnd="8dp">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/horometroInicialEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Horómetro inicial"
-                        android:inputType="number"/>
+                        android:inputType="numberDecimal"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Fecha inicial -->
@@ -123,6 +126,7 @@
                     app:boxCornerRadiusTopStart="16dp">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fechaInicialEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Fecha inicial"
@@ -151,10 +155,11 @@
                     android:layout_marginEnd="8dp">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/horometroFinalEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Horómetro final"
-                        android:inputType="number"/>
+                        android:inputType="numberDecimal"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Fecha final -->
@@ -169,6 +174,7 @@
                     app:boxCornerRadiusTopStart="16dp">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fechaFinalEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Fecha final"
@@ -177,100 +183,28 @@
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
-            <!-- Fila horizontal para Precio por día y horas máx -->
-            <LinearLayout
+            <!-- Precio por día -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
                 android:layout_marginBottom="16dp">
 
-                <!-- Precio por día -->
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:boxCornerRadiusBottomEnd="16dp"
-                    app:boxCornerRadiusBottomStart="16dp"
-                    app:boxCornerRadiusTopEnd="16dp"
-                    app:boxCornerRadiusTopStart="16dp"
-                    android:layout_marginEnd="8dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Precio por día"
-                        android:inputType="numberDecimal"/>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <!-- Horas máx por día -->
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:boxCornerRadiusBottomEnd="16dp"
-                    app:boxCornerRadiusBottomStart="16dp"
-                    app:boxCornerRadiusTopEnd="16dp"
-                    app:boxCornerRadiusTopStart="16dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="10 h. máx. por día"
-                        android:inputType="number"
-                        android:focusable="false"/>
-                </com.google.android.material.textfield.TextInputLayout>
-            </LinearLayout>
-
-            <!-- Horómetro máximo -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="16dp">
-
-                <TextView
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/precioDiaEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Horómetro máximo"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:layout_marginBottom="8dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="4 569 horas"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
-            </LinearLayout>
-
-            <!-- Precio total -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="24dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Precio total"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:layout_marginBottom="8dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0.00"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
-            </LinearLayout>
+                    android:hint="Precio por día"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Botón Guardar -->
             <Button
+                android:id="@+id/saveButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Guardar"
@@ -279,6 +213,15 @@
                 android:textSize="16sp"
                 android:layout_marginTop="16dp"
                 android:padding="12dp"/>
+
+            <!-- ProgressBar -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
