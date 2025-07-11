@@ -23,7 +23,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:cornerRadius="50dp"
-        app:icon="@drawable/icon_guardar_blanco"
+        app:icon="@drawable/icon_nuevo_blanco"
         app:iconPadding="5dp"
         app:iconTint="@color/white"
         app:layout_anchorGravity="bottom|end" />
