@@ -102,7 +102,6 @@ public class FichasTecnicasFragment extends Fragment {
         return view;
     }
 
-    // Método para seleccionar PDF
     private void seleccionarPdfParaFicha(String fichaId) {
         viewModel.prepararParaSubirPdf(fichaId);
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
@@ -110,7 +109,7 @@ public class FichasTecnicasFragment extends Fragment {
         pdfPickerLauncher.launch(intent);
     }
 
-    // Método para abrir PDF
+    // Metodo para abrir PDF
     private void abrirPdf(FichaTecnica ficha) {
         if (ficha != null && ficha.tienePdf()) {
             viewModel.abrirPdf(requireContext(), ficha);
