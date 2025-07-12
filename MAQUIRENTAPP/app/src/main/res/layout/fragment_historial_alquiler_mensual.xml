@@ -26,7 +26,7 @@
                     android:id="@+id/disminuirAnio"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/icon_nuevo_blanco" />
+                    android:src="@drawable/icon_flecha_negro" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:rotation="180"
-                    android:src="@drawable/icon_nuevo_blanco" />
+                    android:src="@drawable/icon_flecha_negro" />
 
             </LinearLayout>
 
@@ -76,7 +76,7 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_marginEnd="5dp"
-                            android:src="@drawable/icon_nuevo_blanco" />
+                            android:src="@drawable/icon_ubicacion_blanco" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -127,7 +127,7 @@
                         android:layout_width="230dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
-                        android:src="@drawable/icon_nuevo_blanco" />
+                        android:src="@drawable/icon_linea_blanco" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
