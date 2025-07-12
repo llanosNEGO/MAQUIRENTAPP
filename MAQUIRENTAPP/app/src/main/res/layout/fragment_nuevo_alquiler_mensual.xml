@@ -4,7 +4,234 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".View.NuevoAlquilerMensualFragment">
+    tools:context=".View.NuevoAlquilerMensualFragment"
+    android:theme="@style/Theme.TextMain">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="Completa estos datos para registrar un nuevo alquiler"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/black"
+            app:cursorColor="@color/black"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="2dp"
+            android:textColorHint="@color/colorHints"
+            app:boxCornerRadiusTopStart="22dp"
+            app:boxCornerRadiusTopEnd="22dp"
+            app:boxCornerRadiusBottomStart="22dp"
+            app:boxCornerRadiusBottomEnd="22dp"
+            app:boxStrokeColor="@color/input_stroke_color"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Empresa que alquila el equipo" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/black"
+                app:cursorColor="@color/black"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="2dp"
+                android:textColorHint="@color/colorHints"
+                app:boxCornerRadiusTopStart="22dp"
+                app:boxCornerRadiusTopEnd="22dp"
+                app:boxCornerRadiusBottomStart="22dp"
+                app:boxCornerRadiusBottomEnd="22dp"
+                app:boxStrokeColor="@color/input_stroke_color"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Horómetro inicial" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/black"
+                app:cursorColor="@color/black"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="2dp"
+                android:textColorHint="@color/colorHints"
+                app:boxCornerRadiusTopStart="22dp"
+                app:boxCornerRadiusTopEnd="22dp"
+                app:boxCornerRadiusBottomStart="22dp"
+                app:boxCornerRadiusBottomEnd="22dp"
+                app:boxStrokeColor="@color/input_stroke_color"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Fecha inicial" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/black"
+            app:cursorColor="@color/black"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="2dp"
+            android:textColorHint="@color/colorHints"
+            app:boxCornerRadiusTopStart="22dp"
+            app:boxCornerRadiusTopEnd="22dp"
+            app:boxCornerRadiusBottomStart="22dp"
+            app:boxCornerRadiusBottomEnd="22dp"
+            app:boxStrokeColor="@color/input_stroke_color"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lugar de trabajo del equipo" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/black"
+                app:cursorColor="@color/black"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="2dp"
+                android:textColorHint="@color/colorHints"
+                app:boxCornerRadiusTopStart="22dp"
+                app:boxCornerRadiusTopEnd="22dp"
+                app:boxCornerRadiusBottomStart="22dp"
+                app:boxCornerRadiusBottomEnd="22dp"
+                app:boxStrokeColor="@color/input_stroke_color"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Horómetro final" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/black"
+                app:cursorColor="@color/black"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="2dp"
+                android:textColorHint="@color/colorHints"
+                app:boxCornerRadiusTopStart="22dp"
+                app:boxCornerRadiusTopEnd="22dp"
+                app:boxCornerRadiusBottomStart="22dp"
+                app:boxCornerRadiusBottomEnd="22dp"
+                app:boxStrokeColor="@color/input_stroke_color"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Fecha final" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/black"
+                app:cursorColor="@color/black"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="2dp"
+                android:textColorHint="@color/colorHints"
+                app:boxCornerRadiusTopStart="22dp"
+                app:boxCornerRadiusTopEnd="22dp"
+                app:boxCornerRadiusBottomStart="22dp"
+                app:boxCornerRadiusBottomEnd="22dp"
+                app:boxStrokeColor="@color/input_stroke_color"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Precio del alquiler" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/black"
+                app:cursorColor="@color/black"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="2dp"
+                android:textColorHint="@color/colorHints"
+                app:boxCornerRadiusTopStart="22dp"
+                app:boxCornerRadiusTopEnd="22dp"
+                app:boxCornerRadiusBottomStart="22dp"
+                app:boxCornerRadiusBottomEnd="22dp"
+                app:boxStrokeColor="@color/input_stroke_color"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Horas mínimas" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/black"
+            app:cursorColor="@color/black"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="2dp"
+            android:textColorHint="@color/colorHints"
+            app:boxCornerRadiusTopStart="22dp"
+            app:boxCornerRadiusTopEnd="22dp"
+            app:boxCornerRadiusBottomStart="22dp"
+            app:boxCornerRadiusBottomEnd="22dp"
+            app:boxStrokeColor="@color/input_stroke_color"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:hint="Precio por hora extra" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
 
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -23,7 +250,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:cornerRadius="50dp"
-        app:icon="@drawable/icon_nuevo_blanco"
+        app:icon="@drawable/icon_guardar_blanco"
         app:iconPadding="5dp"
         app:iconTint="@color/white"
         app:layout_anchorGravity="bottom|end" />
