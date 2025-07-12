@@ -1,6 +1,7 @@
 package com.example.maquirentapp.Network;
 
 import com.example.maquirentapp.Model.AlquilerDia;
+import com.example.maquirentapp.Model.AlquilerMensual;
 import com.example.maquirentapp.Model.GrupoElectrogeno;
 
 import java.util.List;
@@ -19,4 +20,10 @@ public interface ApiServicio {
 
     @POST("AlquileresDia")
     Call<AlquilerDia> crearAlquilerDia(@Body AlquilerDia alquilerDia);
+
+    @GET("AlquileresMensuales")
+    Call<List<AlquilerMensual>>GetAlquileresMensuales();
+    @POST("AlquileresMensuales")
+    Call<AlquilerMensual> crearAlquilerMensual(@Body AlquilerMensual alquilerMensual);
+
 }

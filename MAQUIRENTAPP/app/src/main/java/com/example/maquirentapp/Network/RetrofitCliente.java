@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitCliente {
     private static Retrofit retrofit = null;
-    private static final String URL = "http://arturo.somee.com/api/";
+    private static final String URL = "http://maquirent234.somee.com/api/";
 
     public static Retrofit getCliente(){
         if(retrofit == null){
